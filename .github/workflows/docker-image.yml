@@ -3,7 +3,7 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - 'main'
+      - 'libdyson-neon'
   release:
     types: [published]
 
@@ -17,9 +17,9 @@ jobs:
      attestations: write
      id-token: write
    env:
-     DOCKER_USERNAME: 'zkhcohen'
+     DOCKER_USERNAME: 'watahari'
      IMAGE_NAME: 'prometheus-dyson-exporter'
-     NAMESPACE: 'zkhcohen'
+     NAMESPACE: 'watahari'
      REGISTRY: 'docker.io'
    steps:
     - name: Check Out prometheus-dyson-exporter Repo 
